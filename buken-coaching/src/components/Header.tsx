@@ -30,13 +30,26 @@ function Header() {
         onClick={() => setIsOpen(!isOpen)}
         />}
     </div>
-    {isOpen && (
       <section className={`flex flex-col gap-4 relative bg-secondary-900 
-      ${isOpen ? "h-52" : "h-0"} duration-500 text-primary px-4`}>
+      ${isOpen ? "h-36" : "h-0 bg-transparent"} duration-500 text-primary px-4`}>
+        { isOpen && (
+          <div className="flex flex-col gap-4 relative mt-4">
+            {menuOptions.map((option) => (
 
+              <div
+                className={`flex items-center gap-4 cursor-pointer ${
+                  selectedOption === option && "decoration-success underline underline-offset-2"
+                }`}
+                onClick={() => {setSelectedOption(option); console.log(option)}}
+              >
+                <h2 className="text-white ">{option}</h2>
+              </div>
+            ))}
+          </div>
+
+        )}
     
       </section>
-    )}
 
         </>
   );

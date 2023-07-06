@@ -19,6 +19,8 @@ module.exports = {
       neutral1: "#FFFFFF",
       neutral2: "#F5F5F5",
       neutral3: "#CCCCCC",
+      transparent: "transparent",
+      white: "#FFFFFF",
     },
     extend: {
       spacing: {
