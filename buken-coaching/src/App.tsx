@@ -1,6 +1,7 @@
 import {useState} from 'react'; 
 import './App.css';
 import Header from './components/Header';
+import Home from './components/Home';
 
 function App() {
   const [show, setShow] = useState(false);
@@ -10,7 +11,7 @@ function App() {
   return (
     <>
       <Header setSelectedOptionMain={setSelectedOption} />
-      {selectedOption === "Home" && <p>Home</p>}
+      {selectedOption === "Home" && <Home />}
       {selectedOption === "About Me" && <p>About Me</p>}
       {selectedOption === "Coaching" && <p>Coaching</p>}
     </>

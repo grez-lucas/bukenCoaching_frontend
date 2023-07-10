@@ -22,6 +22,13 @@ module.exports = {
       transparent: "transparent",
       white: "#FFFFFF",
     },
+    fontFamily: {
+      sans: ["Montserrat", "sans-serif"],
+      serif: ["Roboto Slab", "serif"],
+      display: ["Oswald"],
+      // Additional font families can be added here
+      custom: ["Poppins", "sans-serif"],
+    },
     extend: {
       spacing: {
         128: "32rem",
@@ -39,6 +46,11 @@ module.exports = {
       animation: {
         rotate90: "rotate90 1s ease-in-out",
       },
+      backgroundImage: {
+        'most-muscular': 'url("/src/static/most_muscular.png")',
+      },
+      backgroundPosition: {
+      }
     },
   },
   plugins: [
