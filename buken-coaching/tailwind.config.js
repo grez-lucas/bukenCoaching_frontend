@@ -48,6 +48,7 @@ module.exports = {
       },
       backgroundImage: {
         'most-muscular': 'url("/src/static/most_muscular.png")',
+        'front-relaxed': 'url("/src/static/front-relaxed.png")',
       },
       backgroundPosition: {
       }
