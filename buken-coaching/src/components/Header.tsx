@@ -4,15 +4,19 @@ import { faBarsStaggered } from '@fortawesome/free-solid-svg-icons'
 
 import { useState } from "react";
 
-function Header() {
+interface HeaderProps {
+  setSelectedOptionMain: (option: string) => void;
+}
+
+function Header( {setSelectedOptionMain}: HeaderProps ) {
 
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState("Home");
 
   const menuOptions = [
-    "Home",
-    "About Me",
-    "Coaching"
+    {id: 0, name: "Home"},
+    {id: 1, name: "About Me"},
+    {id: 2, name: "Coaching"}
   ]
 
   return (
@@ -38,11 +42,12 @@ function Header() {
 
               <div
                 className={`flex items-center gap-4 cursor-pointer ${
-                  selectedOption === option && "decoration-success underline underline-offset-2"
+                  selectedOption === option.name && "decoration-success underline underline-offset-2"
                 }`}
-                onClick={() => {setSelectedOption(option); console.log(option)}}
+                onClick={() => {setSelectedOption(option.name); console.log(option.name)}}
+                key={option.id}
               >
-                <h2 className="text-white ">{option}</h2>
+                <h2 className="text-white ">{option.name}</h2>
               </div>
             ))}
           </div>

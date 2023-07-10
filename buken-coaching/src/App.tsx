@@ -4,10 +4,14 @@ import Header from './components/Header';
 
 function App() {
   const [show, setShow] = useState(false);
-  
+  const [selectedOption, setSelectedOption] = useState("Home");
+
+
   return (
     <>
-    <Header />
+    <Header 
+    setSelectedOptionMain={setSelectedOption}
+    />
     
  </>
   );
