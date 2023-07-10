@@ -9,11 +9,11 @@ function App() {
 
   return (
     <>
-    <Header 
-    setSelectedOptionMain={setSelectedOption}
-    />
-    
- </>
+      <Header setSelectedOptionMain={setSelectedOption} />
+      {selectedOption === "Home" && <p>Home</p>}
+      {selectedOption === "About Me" && <p>About Me</p>}
+      {selectedOption === "Coaching" && <p>Coaching</p>}
+    </>
   );
 }
 

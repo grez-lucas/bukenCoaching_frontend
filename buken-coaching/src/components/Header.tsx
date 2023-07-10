@@ -44,7 +44,7 @@ function Header( {setSelectedOptionMain}: HeaderProps ) {
                 className={`flex items-center gap-4 cursor-pointer ${
                   selectedOption === option.name && "decoration-success underline underline-offset-2"
                 }`}
-                onClick={() => {setSelectedOption(option.name); console.log(option.name)}}
+                onClick={() => {setSelectedOptionMain(option.name); setSelectedOption(option.name); setIsOpen(false);}}
                 key={option.id}
               >
                 <h2 className="text-white ">{option.name}</h2>
