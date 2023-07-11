@@ -35,7 +35,7 @@ function Header( {setSelectedOptionMain}: HeaderProps ) {
         />}
     </div>
       <section className={`flex flex-col gap-4 fixed top-[10vh] w-full bg-secondary-900 
-      ${isOpen ? "h-36" : "h-0 bg-transparent"} duration-500 text-primary px-4`}>
+      ${isOpen ? "h-36 text-white " : "h-0 bg-transparent text-transparent decoration-transparent"} duration-500  px-4`}>
         { isOpen && (
           <div className="flex flex-col gap-4 relative mt-4">
             {menuOptions.map((option) => (
@@ -47,7 +47,7 @@ function Header( {setSelectedOptionMain}: HeaderProps ) {
                 onClick={() => {setSelectedOptionMain(option.name); setSelectedOption(option.name); setIsOpen(false);}}
                 key={option.id}
               >
-                <h2 className="text-white ">{option.name}</h2>
+                <h2 className=" ">{option.name}</h2>
               </div>
             ))}
           </div>
