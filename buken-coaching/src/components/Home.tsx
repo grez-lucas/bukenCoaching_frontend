@@ -3,8 +3,8 @@ function Home() {
     <>
       {/* First Slide */}
       <div
-        className="bg-[url('/src/static/most_muscular.png')]
-         h-[90vh] bg-[center] bg-cover text-white"
+        className="bg-[url('/src/static/most_muscular-blurred.png')]
+         h-[90vh] bg-[center_top_5rem] bg-cover text-white"
       >
         <div className="grid grid-rows-5 grid-cols-1 h-full font-sans">
           <div></div>
@@ -26,8 +26,8 @@ function Home() {
         </div>
       </div>
       {/* Second Slide  */}
-      <div className="bg-[#227447] h-[140vh] w-full grid items-center text-white p-4">
-        <div id="client_types mb-1">
+      <div className="bg-[#227447] h-[160vh] w-full grid items-center text-white p-4">
+        <div id="client_types mb-5">
           <h2 className="text-center text-3xl font-bold mb-4">
             Tipos de Cliente
           </h2>
@@ -54,7 +54,7 @@ function Home() {
             </li>
           </ul>
         </div>
-        <div id="areas_expertise" className="mb-1 ">
+        <div id="areas_expertise" className="mb-5 ">
           <h2 className="text-center text-3xl font-bold mb-3">
             Áreas de Especialización
           </h2>
@@ -74,7 +74,7 @@ function Home() {
             </li>
           </ul>
         </div>
-        <div id="hands_on_coaching" className="mb-1">
+        <div id="hands_on_coaching" className="mb-0">
           <h2 className="text-center text-3xl font-bold mb-3">
             Coaching Personalizado
           </h2>
@@ -172,7 +172,7 @@ function Home() {
           </p>
           <div className="bg-white rounded-md p-5 my-1 text-success-600">
             <h3 className="text-center text-2xl font-bold mb-4 underline">
-              Coaching de Dieta
+              Coaching de Nutrición
             </h3>
             <ul className="list-disc text-base ml-2 ">
               <li className="mb-3">
@@ -235,7 +235,7 @@ function Home() {
           </div>
           <div className="bg-white rounded-md p-5 my-1 text-success-600">
             <h3 className="text-center text-2xl font-bold mb-4 underline">
-              Coaching de Dieta + Entrenamiento
+              Coaching de Nutrición y Entrenamiento
             </h3>
             <ul className="list-disc text-base ml-2">
               <li className="mb-3">
@@ -277,7 +277,7 @@ function Home() {
             </ul>
           </div>
           <div className="mt-4 flex flex-col gap-2">
-            <button className="bg-gradient-to-t from-success to-success-500 rounded-lg p-5 font-bold text-white">
+            <button className="bg-white rounded-lg p-5 font-bold text-success-600">
               Aplica para Coaching 1:1
             </button>
             <button className="bg-transparent border-[1px] border-white text-white rounded-lg p-5">
