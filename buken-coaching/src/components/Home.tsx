@@ -1,8 +1,7 @@
-
 function Home() {
   return (
     <>
-    {/* First Slide */}
+      {/* First Slide */}
       <div
         className="bg-[url('/src/static/most_muscular.png')]
          h-[90vh] bg-[center] bg-cover text-white"
@@ -26,8 +25,8 @@ function Home() {
           </div>
         </div>
       </div>
-        {/* Second Slide  */}
-      <div className="bg-[#227447] h-[160vh] w-full grid items-center text-white p-4">
+      {/* Second Slide  */}
+      <div className="bg-[#227447] h-[140vh] w-full grid items-center text-white p-4">
         <div id="client_types mb-1">
           <h2 className="text-center text-3xl font-bold mb-4">
             Tipos de Cliente
@@ -63,8 +62,7 @@ function Home() {
             <li className="mb-2 px-2">
               <strong>Pérdida de Grasa & Ganancia Muscular: </strong>
               <span>
-                Cambia tu composición corporal de forma sustentable y
-                eficiente.
+                Cambia tu composición corporal de forma sustentable y eficiente.
               </span>
             </li>
             <li className="mb-2 px-2">
@@ -84,33 +82,75 @@ function Home() {
             <li className="mb-2 px-2">
               <strong>Planes customizados: </strong>
               <span>
-                Basta de planes copiados y pegados. Cada semana parte del plan es hecho a tu medida
-                y orientado a tus objetivos.
+                Basta de planes copiados y pegados. Cada semana parte del plan
+                es hecho a tu medida y orientado a tus objetivos.
               </span>
             </li>
             <li className="mb-2 px-2">
               <strong>Check-ins semanales: </strong>
-              <span>
-                Ajustes basados en tu progreso y feedback. 
-              </span>
+              <span>Ajustes basados en tu progreso y feedback.</span>
             </li>
             <li className="mb-2 px-2">
               <strong>Disponibilidad 24/7: </strong>
               <span>
-                Retroalimentacion ilimitada con respuesta en menos de 24 horas. 
+                Retroalimentacion ilimitada con respuesta en menos de 24 horas.
               </span>
             </li>
           </ul>
         </div>
         <div className="flex justify-center">
-            <div className="bg-[url('/src/static/front-relaxed.png')] h-96 w-64
-            bg-[center] bg-cover">
-
-            </div>
+          <div
+            className="bg-[url('/src/static/front-relaxed.png')] h-96 w-64
+            bg-[center] bg-cover"
+          ></div>
         </div>
       </div>
       {/* Third Slide */}
-      
+      <div className="bg-white h-[150vh] text-success-600 w-full grid gap-0 px-4 pt-8 pb-4">
+        <h2 className="text-center text-3xl font-bold mb-4">
+          Coaching a través de la ciencia y la experiencia
+        </h2>
+        <p className="text-start">
+          Para ayudarte a alcanzar tus metas, mi método de coaching se basa en
+          lo siguiente:
+        </p>
+        <ul className="list-disc text-base ml-2">
+          <li className="mb-2 px-2">
+            <strong>Ciencia: </strong>
+            <span>
+              Logra tus metas con estrategias basadas en la ciencia y diseñadas
+              para obtener resultados reales de manera alcanzable.
+            </span>
+          </li>
+          <li className="mb-2 px-2">
+            <strong>Experiencia: </strong>
+            <span>
+              Con más de 5 años de experiencia en el mundo del fitness y un
+              trasfondo academico en nutrición, he tenido el privilegio de
+              trabajar con múltiples clientes, brindándoles mi apoyo y
+              conocimientos para lograr resultados significativos.
+            </span>
+          </li>
+        </ul>
+        <p className="text-start mb-0 p-0">
+        ¿Quieres descubrir cómo mi coaching individualizado puede impulsar tu éxito y llevar tus resultados al siguiente nivel?
+        </p>
+        <p className="text-start mb-2">
+          Aplica para coaching 1:1 rellenando un breve formulario para comenzar!
+        </p>
+        <div className="flex justify-center">
+          <div
+            className="bg-[url('/src/static/side_relaxed_rectangle_high.png')] h-[339px] w-[280px]
+            bg-[center] bg-cover"
+          ></div>
+        </div>
+        <div className="flex flex-col justify-center gap-2">
+          <button className="bg-gradient-to-t from-success to-success-500 rounded-lg p-5 font-bold text-white">
+            Aplica para Coaching 1:1
+          </button>
+          <button className="bg-white border-[1px] border-black text-black rounded-lg p-5">Agenda una Consulta Gratis</button>
+        </div>
+      </div>
     </>
   );
 }

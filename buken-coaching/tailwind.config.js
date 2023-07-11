@@ -21,6 +21,7 @@ module.exports = {
       neutral3: "#CCCCCC",
       transparent: "transparent",
       white: "#FFFFFF",
+      black: "#000000",
     },
     fontFamily: {
       sans: ["Montserrat", "sans-serif"],
@@ -49,6 +50,7 @@ module.exports = {
       backgroundImage: {
         'most-muscular': 'url("/src/static/most_muscular.png")',
         'front-relaxed': 'url("/src/static/front-relaxed.png")',
+        'side-relaxed': 'url("/src/static/side_relaxed_rectangle_high.png")',
       },
       backgroundPosition: {
       }
