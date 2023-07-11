@@ -156,7 +156,7 @@ function Home() {
       </div>
       {/* Fourth Slide */}
       <div className="bg-[#227447] h-[300vh] w-full grid gap-0 text-white px-4 pt-8 pb-4">
-        <div className="bg-white h-[339px] rounded-md"></div>
+        <div className="bg-[url('/src/static/buken-casual.png')] bg-[center] bg-cover h-[380px] rounded-md"></div>
         <h2 className="text-center text-3xl font-bold my-4">Servicios</h2>
         <div className="flex flex-col justify-center gap-2">
           <p className="text-start">
