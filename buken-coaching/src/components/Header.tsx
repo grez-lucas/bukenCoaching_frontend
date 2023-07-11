@@ -34,7 +34,7 @@ function Header( {setSelectedOptionMain}: HeaderProps ) {
         onClick={() => setIsOpen(!isOpen)}
         />}
     </div>
-      <section className={`flex flex-col gap-4 relative bg-secondary-900 
+      <section className={`flex flex-col gap-4 fixed top-[10vh] w-full bg-secondary-900 
       ${isOpen ? "h-36" : "h-0 bg-transparent"} duration-500 text-primary px-4`}>
         { isOpen && (
           <div className="flex flex-col gap-4 relative mt-4">
