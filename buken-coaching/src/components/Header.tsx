@@ -21,7 +21,7 @@ function Header( {setSelectedOptionMain}: HeaderProps ) {
 
   return (
     <>
-    <div className="grid grid-cols-12 grid-rows-1 content-center bg-success h-[10vh]">
+    <div className="fixed top-0 left-0 right-0 grid grid-cols-12 grid-rows-1 content-center bg-success h-[10vh]">
       <img
         src={LogoRectangle}
         alt="Buken Coaching Logo"
