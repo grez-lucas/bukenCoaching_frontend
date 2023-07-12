@@ -14,9 +14,11 @@ function App() {
     <>
       <Header setSelectedOptionMain={setSelectedOption} />
       {selectedOption === "Home" && <Home setSelectedOption={setSelectedOption}/>}
-      {selectedOption === "About Me" && <p>About Me</p>}
-      {selectedOption === "Coaching" && <p>Coaching</p>}
+      {selectedOption === "¿Quien soy?" && <p>About Me</p>}
+      {selectedOption === "Sobre mi Coaching" && <p>Coaching</p>}
       {selectedOption === "Coaching Form" && <CoachingForm setSelectedOption={setSelectedOption}/> }
+      {selectedOption === "Agenda una consulta gratis" && <p>Agenda una consulta gratis</p>}
+      {selectedOption === "Preguntas Frecuentes" && <p>FAQ</p>}
       <Footer />
     </>
   );

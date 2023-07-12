@@ -27,6 +27,11 @@ module.exports = {
         DEFAULT: "#262626",
         500: "#737373",
       },
+      red: {
+        DEFAULT: "#C0392B",
+        500: "#E74C3C",
+        600: "#C0392B",
+      }
     },
     fontFamily: {
       sans: ["Montserrat", "sans-serif"],

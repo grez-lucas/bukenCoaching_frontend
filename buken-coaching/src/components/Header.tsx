@@ -15,8 +15,11 @@ function Header( {setSelectedOptionMain}: HeaderProps ) {
 
   const menuOptions = [
     {id: 0, name: "Home"},
-    {id: 1, name: "About Me"},
-    {id: 2, name: "Coaching"}
+    {id: 1, name: "¿Quien soy?"},
+    {id: 2, name: "Sobre mi Coaching"},
+    {id: 3, name: "Coaching Form"},
+    {id: 4, name: "Agenda una consulta gratis"},
+    {id: 5, name: "Preguntas Frecuentes"}
   ]
 
   return (
@@ -35,7 +38,7 @@ function Header( {setSelectedOptionMain}: HeaderProps ) {
         />}
     </div>
       <section className={`flex flex-col gap-4 fixed top-[10vh] w-full bg-secondary-900 
-      ${isOpen ? "h-36 text-white " : "h-0 bg-transparent text-transparent decoration-transparent"} duration-500  px-4`}>
+      ${isOpen ? "h-[32vh] text-white " : "h-0 bg-transparent text-transparent decoration-transparent"} duration-500  px-4`}>
         { isOpen && (
           <div className="flex flex-col gap-4 relative mt-4">
             {menuOptions.map((option) => (
