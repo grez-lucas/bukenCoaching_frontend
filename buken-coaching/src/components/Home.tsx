@@ -1,4 +1,13 @@
-function Home() {
+interface HomeProps {
+  setSelectedOption: (option : string) => void;
+}
+
+function Home( {setSelectedOption}: HomeProps ) {
+
+  const handleCoachingForm = () => {
+    setSelectedOption("Coaching Form");
+  };
+
   return (
     <>
       {/* First Slide */}
@@ -18,7 +27,9 @@ function Home() {
               Enfoque basado en la ciencia y adaptado a ti.
             </h3>
             <div className="p-3 grid ">
-              <button className="bg-gradient-to-t from-success to-success-500 rounded-lg p-8 font-bold text-white">
+              <button className="bg-gradient-to-t from-success to-success-500 rounded-lg p-8 font-bold text-white"
+                  onClick={handleCoachingForm}
+              >
                 Aplica para Coaching 1:1
               </button>
             </div>
@@ -146,7 +157,9 @@ function Home() {
           ></div>
         </div>
         <div className="flex flex-col justify-center gap-2">
-          <button className="bg-gradient-to-t from-success to-success-500 rounded-lg p-5 font-bold text-white">
+          <button className="bg-gradient-to-t from-success to-success-500 rounded-lg p-5 font-bold text-white"
+           onClick={handleCoachingForm}
+          >
             Aplica para Coaching 1:1
           </button>
           <button className="bg-white border-[1px] border-black text-black rounded-lg p-5">
@@ -277,7 +290,9 @@ function Home() {
             </ul>
           </div>
           <div className="mt-4 flex flex-col gap-2">
-            <button className="bg-white rounded-lg p-5 font-bold text-success-600">
+            <button className="bg-white rounded-lg p-5 font-bold text-success-600"
+            onClick={handleCoachingForm}
+            >
               Aplica para Coaching 1:1
             </button>
             <button className="bg-transparent border-[1px] border-white text-white rounded-lg p-5">

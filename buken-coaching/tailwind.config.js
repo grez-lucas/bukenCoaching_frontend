@@ -12,7 +12,7 @@ module.exports = {
       xl: "1440px",
     },
     colors: {
-      primary: "#227447",
+      main: "#227447",
       secondary: "#252525",
       accent1: "#C0392B",
       accent2: "#F39C12",
@@ -22,6 +22,11 @@ module.exports = {
       transparent: "transparent",
       white: "#FFFFFF",
       black: "#000000",
+      gray: "#CCCCCC",
+      dark: {
+        DEFAULT: "#262626",
+        500: "#737373",
+      },
     },
     fontFamily: {
       sans: ["Montserrat", "sans-serif"],
