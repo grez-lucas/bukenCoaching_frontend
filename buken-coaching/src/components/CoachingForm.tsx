@@ -36,7 +36,7 @@ function CoachingForm({ setSelectedOption }: CoachingFormProps) {
 
   return (
     <>
-      <div className="mt-[10vh] py-8 px-2 h-[295vh] bg-main">
+      <div className="mt-[10vh] py-8 px-2 h-[310vh] bg-main">
         <div className="py-3 px-6 bg-white ">
           <h1 className="my-6 text-3xl text-center font-bold">Coaching Form</h1>
           <p className="mb-6">

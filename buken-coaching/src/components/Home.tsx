@@ -65,7 +65,7 @@ function Home( {setSelectedOption}: HomeProps ) {
             </li>
           </ul>
         </div>
-        <div id="areas_expertise" className="mb-5 ">
+        <div id="areas_expertise" className="mb-0 ">
           <h2 className="text-center text-3xl font-bold mb-3">
             Áreas de Especialización
           </h2>
