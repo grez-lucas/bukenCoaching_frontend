@@ -10,7 +10,7 @@ function CoachingForm({ setSelectedOption }: CoachingFormProps) {
     label: "block text-sm font-medium text-dark mb-2",
     field:
       "my-4 p-3 focus:ring-dark focus:border-dark block w-full border-b-2 border-dark shadow-sm sm:text-base text-dark bg-gray placeholder:text-dark-500",
-    error: "mt-2 text-sm text-red-600",
+    error: "text-sm text-red-600",
     button:
       "flex flex-col justify-center py-2 px-4 my-8 border border-transparent shadow-sm text-base font-semibold rounded-md text-white bg-success hover:bg-success-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-dark",
   };
@@ -36,7 +36,7 @@ function CoachingForm({ setSelectedOption }: CoachingFormProps) {
 
   return (
     <>
-      <div className="mt-[10vh] py-8 px-2 h-[310vh] bg-main">
+      <div className="mt-[10vh] py-8 px-2 h-min bg-main">
         <div className="py-3 px-6 bg-white ">
           <h1 className="my-6 text-3xl text-center font-bold">Coaching Form</h1>
           <p className="mb-6">
@@ -202,6 +202,11 @@ function CoachingForm({ setSelectedOption }: CoachingFormProps) {
                     No estoy seguro
                   </label>
                 </div>
+                <ErrorMessage
+                  className={styles.error}
+                  name="serviceOfInterest"
+                  component="div"
+                />
                 <label className={styles.label} htmlFor="shortTermGoals">
                   ¿Cuáles son tus metas a corto plazo?
                 </label>
@@ -210,6 +215,11 @@ function CoachingForm({ setSelectedOption }: CoachingFormProps) {
                   id="shortTermGoals"
                   name="shortTermGoals"
                   placeholder="Metas dentro de 3-6 meses"
+                />
+                <ErrorMessage
+                  className={styles.error}
+                  name="shortTermGoals"
+                  component="div"
                 />
                 <label className={styles.label} htmlFor="longTermGoals">
                   ¿Cuáles son tus metas a largo plazo?
@@ -220,6 +230,12 @@ function CoachingForm({ setSelectedOption }: CoachingFormProps) {
                   name="longTermGoals"
                   placeholder="Metas dentro de 1+ años"
                 />
+                <ErrorMessage
+                  className={styles.error}
+                  name="longTermGoals"
+                  component="div"
+                />
+
                 <label className={styles.label} htmlFor="biggestObstacles">
                   ¿Cuáles son tus mayores obstáculos para llegar a tus metas?
                 </label>
@@ -229,6 +245,12 @@ function CoachingForm({ setSelectedOption }: CoachingFormProps) {
                   name="biggestObstacles"
                   placeholder="Tiempo, motivación, conocimiento, etc."
                 />
+                <ErrorMessage
+                  className={styles.error}
+                  name="biggestObstacles"
+                  component="div"
+                />
+
                 <label className={styles.label} htmlFor="motivation">
                   ¿Qué te motiva a alcanzar tus metas?
                 </label>
@@ -237,6 +259,11 @@ function CoachingForm({ setSelectedOption }: CoachingFormProps) {
                   id="motivation"
                   name="motivation"
                   placeholder="Salud, confianza, estética, etc."
+                />
+                <ErrorMessage
+                  className={styles.error}
+                  name="motivation"
+                  component="div"
                 />
                 <label className={styles.label} htmlFor="commitmentLength">
                   ¿Por cuánto tiempo te comprometes a dedicar para conseguir
@@ -280,6 +307,11 @@ function CoachingForm({ setSelectedOption }: CoachingFormProps) {
                     Cliente de largo plazo buscando resultados substanciales
                   </label>
                 </div>
+                <ErrorMessage
+                  className={styles.error}
+                  name="commitmentLength"
+                  component="div"
+                />
                 <label className={styles.label} htmlFor="whenToStart">
                   ¿Idealmente, cuándo deseas empezar?
                 </label>
@@ -288,6 +320,11 @@ function CoachingForm({ setSelectedOption }: CoachingFormProps) {
                   id="whenToStart"
                   name="whenToStart"
                   placeholder="1 de enero, ASAP, etc."
+                />
+                <ErrorMessage
+                  className={styles.error}
+                  name="whenToStart"
+                  component="div"
                 />
                 <label className={styles.label} htmlFor="seriousnessLevel">
                   ¿Te sientes serio respecto a tu compromiso a alcanzar tus
@@ -313,6 +350,12 @@ function CoachingForm({ setSelectedOption }: CoachingFormProps) {
                     No estoy listo aún
                   </label>
                 </div>
+                <ErrorMessage
+                  className={styles.error}
+                  name="seriousnessLevel"
+                  component="div"
+                />
+
                 <label className={styles.label} htmlFor="emailCheckRadio">
                   <Field
                     type="checkbox"
@@ -321,6 +364,12 @@ function CoachingForm({ setSelectedOption }: CoachingFormProps) {
                   />
                   ¡Checkea este botón para asegurarte de que mi correo te llegue!
                 </label>
+                <ErrorMessage
+                  className={styles.error}
+                  name="emailCheckRadio"
+                  component="div"
+                />
+
                 <div className="flex justify-center">
                   <button
                     className={styles.button}
