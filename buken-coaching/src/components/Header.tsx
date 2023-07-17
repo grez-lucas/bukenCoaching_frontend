@@ -2,16 +2,23 @@ import LogoRectangle from '../static/Buken_Coaching_Logo_Rectangle.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBarsStaggered } from '@fortawesome/free-solid-svg-icons'
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 interface HeaderProps {
   setSelectedOptionMain: (option: string) => void;
+  option?: string;
 }
 
-function Header( {setSelectedOptionMain}: HeaderProps ) {
+function Header( {setSelectedOptionMain, option}: HeaderProps ) {
 
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedOption, setSelectedOption] = useState("Home");
+  const initialSelectedOption =  option ? option : "Home";
+  const [selectedOption, setSelectedOption] = useState(initialSelectedOption);
+
+  useEffect(() => {
+    setSelectedOption(initialSelectedOption);
+  }, [initialSelectedOption]);
+
 
   const menuOptions = [
     {id: 0, name: "Home"},

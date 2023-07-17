@@ -9,7 +9,6 @@ import FAQ from './components/FAQ'
 import Appointments from './components/Appointments';
 
 function App() {
-  const [show, setShow] = useState(false);
   const [selectedOption, setSelectedOption] = useState("Home");
 
   const handleSetSelectedOption = (option : string) => {
@@ -19,7 +18,7 @@ function App() {
 
   return (
     <>
-      <Header setSelectedOptionMain={handleSetSelectedOption} />
+      <Header setSelectedOptionMain={handleSetSelectedOption} option={selectedOption} />
       {selectedOption === "Home" && <Home setSelectedOption={handleSetSelectedOption}/>}
       {selectedOption === "¿Quien soy?" && <p>About Me</p>}
       {selectedOption === "Sobre mi Coaching" && <Coaching setSelectedOption={handleSetSelectedOption} />}
