@@ -6,20 +6,25 @@ import Home from './components/Home';
 import CoachingForm from './components/CoachingForm';
 import Coaching from './components/Coaching';
 import FAQ from './components/FAQ'
+import Appointments from './components/Appointments';
 
 function App() {
   const [show, setShow] = useState(false);
   const [selectedOption, setSelectedOption] = useState("Home");
 
+  const handleSetSelectedOption = (option : string) => {
+    window.scrollTo( { top: 0, left: 0, behavior: 'smooth' });
+    setSelectedOption(option);
+  }
 
   return (
     <>
-      <Header setSelectedOptionMain={setSelectedOption} />
-      {selectedOption === "Home" && <Home setSelectedOption={setSelectedOption}/>}
+      <Header setSelectedOptionMain={handleSetSelectedOption} />
+      {selectedOption === "Home" && <Home setSelectedOption={handleSetSelectedOption}/>}
       {selectedOption === "¿Quien soy?" && <p>About Me</p>}
-      {selectedOption === "Sobre mi Coaching" && <Coaching setSelectedOption={setSelectedOption} />}
-      {selectedOption === "Coaching Form" && <CoachingForm setSelectedOption={setSelectedOption}/> }
-      {selectedOption === "Agenda una consulta gratis" && <p>Agenda una consulta gratis</p>}
+      {selectedOption === "Sobre mi Coaching" && <Coaching setSelectedOption={handleSetSelectedOption} />}
+      {selectedOption === "Coaching Form" && <CoachingForm setSelectedOption={handleSetSelectedOption}/> }
+      {selectedOption === "Agenda una consulta gratis" && <Appointments />}
       {selectedOption === "Preguntas Frecuentes" && <FAQ />}
       <Footer />
     </>

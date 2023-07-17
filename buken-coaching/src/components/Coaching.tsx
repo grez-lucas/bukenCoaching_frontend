@@ -48,6 +48,10 @@ function Coaching({ setSelectedOption }: CoachingProps) {
     },
   ];
 
+  const handleConsultationForm = () => {
+    setSelectedOption("Agenda una consulta gratis");
+  };
+
   return (
     <div className="mt-[10vh] bg-dark text-slate-200 divide-y-4 divide-main">
       <section className="py-10 flex flex-col items-center">
@@ -57,7 +61,9 @@ function Coaching({ setSelectedOption }: CoachingProps) {
           src={BukenCasual3}
           alt="Buken Coaching"
         ></img>
-        <button className="bg-gradient-to-t from-success to-success-500 rounded-lg p-7 font-bold text-white">
+        <button className="bg-gradient-to-t from-success to-success-500 rounded-lg p-7 font-bold text-white"
+        onClick={handleConsultationForm}
+        >
           Agendar Consulta
         </button>
       </section>
@@ -93,13 +99,13 @@ function Coaching({ setSelectedOption }: CoachingProps) {
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
               viewBox="-9 -5 24 24"
-              stroke-width="1.5"
+              strokeWidth="1.5"
               stroke="currentColor"
               className="w-6 h-6"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 d="M15.75 19.5L8.25 12l7.5-7.5"
               />
             </svg>
@@ -120,13 +126,13 @@ function Coaching({ setSelectedOption }: CoachingProps) {
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
               viewBox="-9 -5 24 24"
-              stroke-width="1.5"
+              strokeWidth="1.5"
               stroke="currentColor"
               className="w-6 h-6"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 d="M15.75 19.5L8.25 12l7.5-7.5"
               />
             </svg>
@@ -146,13 +152,13 @@ function Coaching({ setSelectedOption }: CoachingProps) {
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
               viewBox="-9 -5 24 24"
-              stroke-width="1.5"
+              strokeWidth="1.5"
               stroke="currentColor"
               className="w-6 h-6"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 d="M15.75 19.5L8.25 12l7.5-7.5"
               />
             </svg>
@@ -171,13 +177,13 @@ function Coaching({ setSelectedOption }: CoachingProps) {
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
               viewBox="-9 -5 24 24"
-              stroke-width="1.5"
+              strokeWidth="1.5"
               stroke="currentColor"
               className="w-6 h-6"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 d="M15.75 19.5L8.25 12l7.5-7.5"
               />
             </svg>
@@ -195,13 +201,13 @@ function Coaching({ setSelectedOption }: CoachingProps) {
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
               viewBox="-9 -5 24 24"
-              stroke-width="1.5"
+              strokeWidth="1.5"
               stroke="currentColor"
               className="w-6 h-6"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 d="M15.75 19.5L8.25 12l7.5-7.5"
               />
             </svg>
@@ -214,7 +220,9 @@ function Coaching({ setSelectedOption }: CoachingProps) {
           </div>
         </section>
 
-        <button className={styles.button}>Agendar Consulta</button>
+        <button className={styles.button}
+        onClick={handleConsultationForm}
+        >Agendar Consulta</button>
       </section>
 
       {/* What you get Section */}
@@ -249,7 +257,9 @@ function Coaching({ setSelectedOption }: CoachingProps) {
           </li>
         </ul>
         <div className="flex flex-col gap-2 mb-6">
-          <button className={styles.button}>Agendar Consulta</button>
+          <button className={styles.button}
+          onClick={handleConsultationForm}
+          >Agendar Consulta</button>
           <button className={styles.button_outline}>
             Aplica para Coaching 1:1
           </button>

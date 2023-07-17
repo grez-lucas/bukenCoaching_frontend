@@ -8,6 +8,10 @@ function Home( {setSelectedOption}: HomeProps ) {
     setSelectedOption("Coaching Form");
   };
 
+  const handleConsultationForm = () => {
+    setSelectedOption("Agenda una consulta gratis");
+  };
+
   return (
     <>
       {/* First Slide */}
@@ -162,7 +166,9 @@ function Home( {setSelectedOption}: HomeProps ) {
           >
             Aplica para Coaching 1:1
           </button>
-          <button className="bg-white border-[1px] border-black text-black rounded-lg p-5">
+          <button className="bg-white border-[1px] border-black text-black rounded-lg p-5"
+          onClick={handleConsultationForm}
+          >
             Agenda una Consulta Gratis
           </button>
         </div>
@@ -295,7 +301,9 @@ function Home( {setSelectedOption}: HomeProps ) {
             >
               Aplica para Coaching 1:1
             </button>
-            <button className="bg-transparent border-[1px] border-white text-white rounded-lg p-5">
+            <button className="bg-transparent border-[1px] border-white text-white rounded-lg p-5"
+            onClick={handleConsultationForm}
+            >
               Agenda una Consulta Gratis
             </button>
           </div>
