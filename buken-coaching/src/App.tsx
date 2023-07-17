@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import Home from './components/Home';
 import CoachingForm from './components/CoachingForm';
 import Coaching from './components/Coaching';
+import FAQ from './components/FAQ'
 
 function App() {
   const [show, setShow] = useState(false);
@@ -19,7 +20,7 @@ function App() {
       {selectedOption === "Sobre mi Coaching" && <Coaching setSelectedOption={setSelectedOption} />}
       {selectedOption === "Coaching Form" && <CoachingForm setSelectedOption={setSelectedOption}/> }
       {selectedOption === "Agenda una consulta gratis" && <p>Agenda una consulta gratis</p>}
-      {selectedOption === "Preguntas Frecuentes" && <p>FAQ</p>}
+      {selectedOption === "Preguntas Frecuentes" && <FAQ />}
       <Footer />
     </>
   );
