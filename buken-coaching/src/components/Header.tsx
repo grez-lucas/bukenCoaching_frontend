@@ -38,7 +38,7 @@ function Header( {setSelectedOptionMain}: HeaderProps ) {
         />}
     </div>
       <section className={`flex flex-col gap-4 fixed top-[10vh] w-full bg-secondary-900 
-      ${isOpen ? "h-[32vh] z-40 text-white " : "h-0 bg-transparent text-transparent decoration-transparent"} duration-500  px-4`}>
+      ${isOpen ? "h-min pb-2 z-40 text-white " : "h-0 pb-0 bg-transparent text-transparent decoration-transparent"} duration-500  px-4`}>
         { isOpen && (
           <div className="flex flex-col gap-4 relative mt-4">
             {menuOptions.map((option) => (
