@@ -15,7 +15,7 @@ function Home( {setSelectedOption}: HomeProps ) {
         className="bg-[url('/src/static/most_muscular-blurred.png')]
          h-[90vh] bg-[center_top_5rem] bg-cover text-white"
       >
-        <div className="grid grid-rows-5 grid-cols-1 h-full font-sans">
+        <div className="flex flex-col-reverse h-full font-sans">
           <div></div>
           <div></div>
           <div></div>
@@ -37,7 +37,7 @@ function Home( {setSelectedOption}: HomeProps ) {
         </div>
       </div>
       {/* Second Slide  */}
-      <div className="bg-[#227447] h-[160vh] w-full grid items-center text-white p-4">
+      <div className="bg-[#227447] h-min w-full grid items-center text-white p-4">
         <div id="client_types mb-5">
           <h2 className="text-center text-3xl font-bold mb-4">
             Tipos de Cliente
@@ -117,7 +117,7 @@ function Home( {setSelectedOption}: HomeProps ) {
         </div>
       </div>
       {/* Third Slide */}
-      <div className="bg-white h-[150vh] text-success-600 w-full grid gap-0 px-4 pt-8 pb-4">
+      <div className="bg-white h-min text-success-600 w-full grid gap-0 px-4 pt-8 pb-4">
         <h2 className="text-center text-3xl font-bold mb-4">
           Coaching a través de la ciencia y la experiencia
         </h2>
@@ -150,7 +150,7 @@ function Home( {setSelectedOption}: HomeProps ) {
         <p className="text-start mb-2">
           Aplica para coaching 1:1 rellenando un breve formulario para comenzar!
         </p>
-        <div className="flex justify-center">
+        <div className="flex justify-center my-6">
           <div
             className="bg-[url('/src/static/side_relaxed_rectangle_high.png')] h-[339px] w-[280px]
             bg-[center] bg-cover"
@@ -168,7 +168,7 @@ function Home( {setSelectedOption}: HomeProps ) {
         </div>
       </div>
       {/* Fourth Slide */}
-      <div className="bg-[#227447] h-[300vh] w-full grid gap-0 text-white px-4 pt-8 pb-4">
+      <div className="bg-[#227447] h-min w-full grid gap-0 text-white px-4 pt-8 pb-4">
         <div className="bg-[url('/src/static/buken-casual.png')] bg-[center] bg-cover h-[380px] rounded-md"></div>
         <h2 className="text-center text-3xl font-bold my-4">Servicios</h2>
         <div className="flex flex-col justify-center gap-2">
