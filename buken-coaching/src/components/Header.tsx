@@ -35,7 +35,8 @@ function Header( {setSelectedOptionMain, option}: HeaderProps ) {
       <img
         src={LogoRectangle}
         alt="Buken Coaching Logo"
-        className="h-[10vh] col-span-5"
+        className="h-[10vh] col-span-5 cursor-pointer"
+        onClick={() => setSelectedOptionMain("Home")}
         />
       {<FontAwesomeIcon
         icon={faBarsStaggered}
