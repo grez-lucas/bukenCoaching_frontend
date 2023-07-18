@@ -362,7 +362,7 @@ function CoachingForm({ setSelectedOption }: CoachingFormProps) {
                     name="emailCheckRadio"
                     className="mr-2 text-dark"
                   />
-                  ¡Checkea este botón para asegurarte de que mi correo te llegue!
+                  ¡Chequea este botón para asegurarte de que mi correo te llegue!
                 </label>
                 <ErrorMessage
                   className={styles.error}
