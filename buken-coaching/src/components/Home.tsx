@@ -1,3 +1,5 @@
+import ResultsCarousel from "./ResultsCarousel";
+
 interface HomeProps {
   setSelectedOption: (option : string) => void;
 }
@@ -308,6 +310,10 @@ function Home( {setSelectedOption}: HomeProps ) {
             </button>
           </div>
         </div>
+      </div>
+      {/* Fifth Slide */}
+      <div className="bg-dark h-min w-full grid gap-0 text-white px-4 pt-8 pb-4">
+        <ResultsCarousel />
       </div>
     </>
   );

@@ -1,6 +1,6 @@
 import { FAQAccordion } from "./FAQAccordion";
-import GreenLogo from "../static/Buken_Coaching_Logo.png";
 import BukenCasual3 from "../static/buken-casual3.png";
+import ResultsCarousel from "./ResultsCarousel";
 
 interface CoachingProps {
   setSelectedOption: (option: string) => void;
@@ -271,6 +271,10 @@ function Coaching({ setSelectedOption }: CoachingProps) {
       {/* FAQ Section */}
       <section className="mt-0 pt-0 py-10 px-6 flex flex-col items-center">
         <FAQAccordion items={FAQItems} />
+      </section>
+      {/* Testimonials Section */}
+      <section className="mt-0 pt-0 py-10 px-6 flex flex-col items-center">
+      <ResultsCarousel />
       </section>
     </div>
   );
