@@ -53,6 +53,10 @@ function Coaching({ setSelectedOption }: CoachingProps) {
     setSelectedOption("Agenda una consulta gratis");
   };
 
+  const handleCoachingForm = () => {
+    setSelectedOption("Coaching Form");
+  };
+
   return (
     <div className="mt-[10vh] bg-dark text-slate-200 divide-y-4 divide-main">
       <section className="py-10 flex flex-col items-center">
@@ -261,7 +265,9 @@ function Coaching({ setSelectedOption }: CoachingProps) {
           <button className={styles.button}
           onClick={handleConsultationForm}
           >Agendar Consulta</button>
-          <button className={styles.button_outline}>
+          <button className={styles.button_outline}
+          onClick={handleCoachingForm}
+          >
             Aplica para Coaching 1:1
           </button>
         </div>
