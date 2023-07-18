@@ -1,6 +1,7 @@
 import { FAQAccordion } from "./FAQAccordion";
 import BukenCasual3 from "../static/buken-casual3.png";
 import ResultsCarousel from "./ResultsCarousel";
+import CollageImage from "../static/collage.png";
 
 interface CoachingProps {
   setSelectedOption: (option: string) => void;
@@ -264,9 +265,8 @@ function Coaching({ setSelectedOption }: CoachingProps) {
             Aplica para Coaching 1:1
           </button>
         </div>
-        <div className="bg-white h-[394px] w-[320px] text-black">
-          Collage of my excel sheets and meetings goes here
-        </div>
+
+        <img src={CollageImage} alt="" loading="lazy" className="block w-full" />
       </section>
       {/* FAQ Section */}
       <section className="mt-0 pt-0 py-10 px-6 flex flex-col items-center">
