@@ -1,13 +1,20 @@
 import { FAQAccordion } from "./FAQAccordion";
+import { useRef } from "react";
 import BukenCasual3 from "../static/buken-casual3.png";
 import ResultsCarousel from "./ResultsCarousel";
 import CollageImage from "../static/collage.png";
+import { LazyMotion, domAnimation, m, useScroll } from "framer-motion";
 
 interface CoachingProps {
   setSelectedOption: (option: string) => void;
 }
 
 function Coaching({ setSelectedOption }: CoachingProps) {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+  });
+
   const styles = {
     title: "my-10 text-4xl font-bold text-center",
     subtitle: "px-0 text-xl font-bold text-center",
@@ -66,8 +73,9 @@ function Coaching({ setSelectedOption }: CoachingProps) {
           src={BukenCasual3}
           alt="Buken Coaching"
         ></img>
-        <button className="bg-gradient-to-t from-success to-success-500 rounded-lg p-7 font-bold text-white"
-        onClick={handleConsultationForm}
+        <button
+          className="bg-gradient-to-t from-success to-success-500 rounded-lg p-7 font-bold text-white"
+          onClick={handleConsultationForm}
         >
           Agendar Consulta
         </button>
@@ -83,7 +91,6 @@ function Coaching({ setSelectedOption }: CoachingProps) {
         >
           <path d="M24 22h-24l12-20z" />
         </svg>
-
         <div className="flex w-3/4 my-10">
           <div className="flex flex-col divide-y-2 w-1/4 divide-main">
             <div className="h-1/2"></div>
@@ -95,139 +102,190 @@ function Coaching({ setSelectedOption }: CoachingProps) {
             <div className="h-1/2"></div>
           </div>
         </div>
-
         {/* Before you apply steps */}
-        <section className="py-10 px-4 grid grid-cols-10 grid-rows-5 gap-y-8 items-center">
-          <div className="col-span-1 row-span-5 bg-main w-1 h-full"></div>
-          <div className="col-span-1 row-span-1 flex flex-row-reverse text-main">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="-9 -5 24 24"
-              strokeWidth="1.5"
-              stroke="currentColor"
-              className="w-6 h-6"
+        <LazyMotion features={domAnimation}>
+          <section
+            ref={sectionRef}
+            className="py-10 px-4 grid grid-cols-10 grid-rows-5 gap-y-8 items-center"
+          >
+            <m.div
+              layoutScroll
+              className="col-span-1 row-span-5 mt-20 bg-main w-1 h-full origin-top overflow-scroll"
+              style={{ scaleY: scrollYProgress }}
+            />
+            <m.div
+              className="col-span-1 row-span-1 flex flex-row-reverse text-main"
+              initial={{ x: 30 }}
+              whileInView={{ x: 0 }}
+              transition={{ duration: 0.5 }}
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M15.75 19.5L8.25 12l7.5-7.5"
-              />
-            </svg>
-          </div>
-          <div className={styles.textBox}>
-            <p>
-              <strong>Conóce mis metodos - </strong>{" "}
-              <span>
-                Para entender mejor de mi y mi estilo de coaching, te recomiendo
-                que me sigas en mis redes sociales y que leas la sección de
-                "Sobre mi" en mi página web.
-              </span>
-            </p>
-          </div>
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="-9 -5 24 24"
+                  strokeWidth="1.5"
+                  stroke="currentColor"
+                  className="w-6 h-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M15.75 19.5L8.25 12l7.5-7.5"
+                  />
+                </svg>
+              </div>
+            </m.div>
+            <m.div
+              className={styles.textBox}
+              initial={{ x: 30 }}
+              whileInView={{ x: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <p>
+                <strong>Conóce mis metodos - </strong>{" "}
+                <span>
+                  Para entender mejor de mi y mi estilo de coaching, te
+                  recomiendo que me sigas en mis redes sociales y que leas la
+                  sección de "Sobre mi" en mi página web.
+                </span>
+              </p>
+            </m.div>
+            <m.div
+              className="col-span-1 row-span-1 flex flex-row-reverse text-main"
+              initial={{ x: 30 }}
+              whileInView={{ x: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="-9 -5 24 24"
+                strokeWidth="1.5"
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M15.75 19.5L8.25 12l7.5-7.5"
+                />
+              </svg>
+            </m.div>
+            <m.div
+              className={styles.textBox}
+              initial={{ x: 30 }}
+              whileInView={{ x: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <p>
+                <strong>¿Estás listo para un coach? - </strong> El asesoramiento
+                es una inversión en tu futuro yo. Tus metas solo pueden ser
+                alcanzadas si ambos hacemos lo que se requiere de cada uno.
+                Preguntate a ti mismo si estás listo para hacer el trabajo y si
+                estás dispuesto a invertir en ti mismo. El éxito no es un
+                accidente, es una elección.
+              </p>
+            </m.div>
+            <m.div className="col-span-1 row-span-1 flex flex-row-reverse text-main"
+              initial={{ x: 30 }}
+              whileInView={{ x: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="-9 -5 24 24"
+                strokeWidth="1.5"
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M15.75 19.5L8.25 12l7.5-7.5"
+                />
+              </svg>
+            </m.div>
+            <m.div className={styles.textBox}
+              initial={{ x: 30 }}
+              whileInView={{ x: 0 }}
+              transition={{ duration: 0.5 }}>
+              <p>
+                <strong>Que esperar - </strong>
+                El asesoramiento es un trabajo en equipo. Te ayudaré en mi mayor
+                capacidad a alcanzar tus metas. Sin embargo, no puedo hacer el
+                trabajo por ti. Debemos trabajar juntos, yo solo puedo guiarte,
+                pero tu debes caminar el sendero.
+              </p>
+            </m.div>
+            <m.div className="col-span-1 row-span-1 flex flex-row-reverse text-main"
+                          initial={{ x: 30 }}
+                          whileInView={{ x: 0 }}
+                          transition={{ duration: 0.5 }}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="-9 -5 24 24"
+                strokeWidth="1.5"
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M15.75 19.5L8.25 12l7.5-7.5"
+                />
+              </svg>
+            </m.div>
+            <m.div className={styles.textBox}
+                          initial={{ x: 30 }}
+                          whileInView={{ x: 0 }}
+                          transition={{ duration: 0.5 }}>
+              <p>
+                <strong>Primera consulta - </strong> Durante nuestra primera
+                charla haremos una vista general del servicio de asesoramiento.
+                Responderemos cualquier pregunta que tengas y discutiremos tus
+                metas y expectativas.
+              </p>
+            </m.div>
+            <m.div className="col-span-1 row-span-1 flex flex-row-reverse text-main"
+                          initial={{ x: 30 }}
+              whileInView={{ x: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="-9 -5 24 24"
+                strokeWidth="1.5"
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M15.75 19.5L8.25 12l7.5-7.5"
+                />
+              </svg>
+            </m.div>
+            <m.div className={styles.textBox}
+              initial={{ x: 30 }}
+              whileInView={{ x: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <p>
+                <strong>¡Vamos! - </strong> Pareces estar listo para comenzar.
+                Agenda tu primera consulta con el botón de abajo.
+              </p>
+            </m.div>
+          </section>
+        </LazyMotion>
 
-          <div className="col-span-1 row-span-1 flex flex-row-reverse text-main">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="-9 -5 24 24"
-              strokeWidth="1.5"
-              stroke="currentColor"
-              className="w-6 h-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M15.75 19.5L8.25 12l7.5-7.5"
-              />
-            </svg>
-          </div>
-          <div className={styles.textBox}>
-            <p>
-              <strong>¿Estás listo para un coach? - </strong> El asesoramiento
-              es una inversión en tu futuro yo. Tus metas solo pueden ser
-              alcanzadas si ambos hacemos lo que se requiere de cada uno.
-              Preguntate a ti mismo si estás listo para hacer el trabajo y si
-              estás dispuesto a invertir en ti mismo. El éxito no es un
-              accidente, es una elección.
-            </p>
-          </div>
-          <div className="col-span-1 row-span-1 flex flex-row-reverse text-main">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="-9 -5 24 24"
-              strokeWidth="1.5"
-              stroke="currentColor"
-              className="w-6 h-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M15.75 19.5L8.25 12l7.5-7.5"
-              />
-            </svg>
-          </div>
-          <div className={styles.textBox}>
-            <p>
-              <strong>Que esperar - </strong>
-              El asesoramiento es un trabajo en equipo. Te ayudaré en mi mayor
-              capacidad a alcanzar tus metas. Sin embargo, no puedo hacer el
-              trabajo por ti. Debemos trabajar juntos, yo solo puedo guiarte,
-              pero tu debes caminar el sendero.
-            </p>
-          </div>
-          <div className="col-span-1 row-span-1 flex flex-row-reverse text-main">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="-9 -5 24 24"
-              strokeWidth="1.5"
-              stroke="currentColor"
-              className="w-6 h-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M15.75 19.5L8.25 12l7.5-7.5"
-              />
-            </svg>
-          </div>
-          <div className={styles.textBox}>
-            <p>
-              <strong>Primera consulta - </strong> Durante nuestra primera
-              charla haremos una vista general del servicio de asesoramiento.
-              Responderemos cualquier pregunta que tengas y discutiremos tus
-              metas y expectativas.
-            </p>
-          </div>
-          <div className="col-span-1 row-span-1 flex flex-row-reverse text-main">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="-9 -5 24 24"
-              strokeWidth="1.5"
-              stroke="currentColor"
-              className="w-6 h-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M15.75 19.5L8.25 12l7.5-7.5"
-              />
-            </svg>
-          </div>
-          <div className={styles.textBox}>
-            <p>
-              <strong>¡Vamos! - </strong> Pareces estar listo para comenzar.
-              Agenda tu primera consulta con el botón de abajo.
-            </p>
-          </div>
-        </section>
-
-        <button className={styles.button}
-        onClick={handleConsultationForm}
-        >Agendar Consulta</button>
+        <button className={styles.button} onClick={handleConsultationForm}>
+          Agendar Consulta
+        </button>
       </section>
 
       {/* What you get Section */}
@@ -262,17 +320,23 @@ function Coaching({ setSelectedOption }: CoachingProps) {
           </li>
         </ul>
         <div className="flex flex-col gap-2 mb-6">
-          <button className={styles.button}
-          onClick={handleConsultationForm}
-          >Agendar Consulta</button>
-          <button className={styles.button_outline}
-          onClick={handleCoachingForm}
+          <button className={styles.button} onClick={handleConsultationForm}>
+            Agendar Consulta
+          </button>
+          <button
+            className={styles.button_outline}
+            onClick={handleCoachingForm}
           >
             Aplica para Coaching 1:1
           </button>
         </div>
 
-        <img src={CollageImage} alt="" loading="lazy" className="block w-full" />
+        <img
+          src={CollageImage}
+          alt=""
+          loading="lazy"
+          className="block w-full"
+        />
       </section>
       {/* FAQ Section */}
       <section className="mt-0 pt-0 py-10 px-6 flex flex-col items-center">
@@ -280,7 +344,7 @@ function Coaching({ setSelectedOption }: CoachingProps) {
       </section>
       {/* Testimonials Section */}
       <section className="mt-0 pt-0 py-10 px-6 flex flex-col items-center">
-      <ResultsCarousel />
+        <ResultsCarousel />
       </section>
     </div>
   );
