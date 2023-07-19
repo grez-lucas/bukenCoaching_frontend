@@ -142,8 +142,8 @@ function Home({ setSelectedOption }: HomeProps) {
           <m.div
             className="bg-[url('/src/static/front-relaxed.png')] h-96 w-64
             bg-[center] bg-cover"
-            initial={{ opacity: 0, translateX: -100 }}
-            whileInView={{ opacity: 1, translateX: 0 }}
+            initial={{ opacity: 0}}
+            whileInView={{ opacity: 1 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
           ></m.div>
