@@ -1,11 +1,15 @@
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import emailjs from '@emailjs/browser';
+import { useRef } from "react";
 
 interface CoachingFormProps {
   setSelectedOption: (option: string) => void;
 }
 
 function CoachingForm({ setSelectedOption }: CoachingFormProps) {
+  const formRef = useRef<HTMLFormElement | null>(null);
+  
   const styles = {
     label: "block text-sm font-medium text-dark mb-2",
     field:
@@ -33,6 +37,23 @@ function CoachingForm({ setSelectedOption }: CoachingFormProps) {
     seriousnessLevel: Yup.string().required("Required"),
     emailCheckRadio: Yup.string().required("Required"),
   });
+
+  const sendEmail = (values : any) => {
+    const emailData = {
+      service_id: "your_emailjs_service_id",
+      template_id: "your_emailjs_template_id",
+      user_id: "your_emailjs_user_id",
+      template_params: values,
+    };
+
+    emailjs.sendForm('service_r8fa00i', 'template_pe4anz9', emailData.template_params, 'nLryhraEFSHi-AvzB')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+
+  };
 
   return (
     <>
@@ -75,11 +96,14 @@ function CoachingForm({ setSelectedOption }: CoachingFormProps) {
               emailCheckRadio: "",
             }}
             onSubmit={(values) => {
-              alert(JSON.stringify(values, null, 2));
+              // alert(JSON.stringify(values, null, 2));
+              // console.log(formRef.current)
+              sendEmail(formRef.current);
+              // Alert the user that the form was submitted
             }}
             validationSchema={formSchema}
           >
-            <Form>
+            <Form ref={formRef} id="coachingForm">
               <div className="bg-white">
                 <Field
                   className={styles.field}
