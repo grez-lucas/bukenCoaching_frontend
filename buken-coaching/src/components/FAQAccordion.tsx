@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { Collapse, initTE } from "tw-elements";
-import { number } from "yup";
 
 type FAQItem = {
   question: string;
