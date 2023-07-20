@@ -150,7 +150,7 @@ function Home({ setSelectedOption }: HomeProps) {
         </div>
       </div>
       {/* Third Slide */}
-      <div className="bg-white h-min text-success-600 w-full grid gap-0 px-4 pt-8 pb-4">
+      <div className="bg-white font-medium h-min text-success-600 w-full grid gap-0 px-4 pt-8 pb-4">
         <m.div
           initial={{ opacity: 0, translateX: -100 }}
           whileInView={{ opacity: 1, translateX: 0 }}
@@ -167,7 +167,7 @@ function Home({ setSelectedOption }: HomeProps) {
           transition={{ duration: 1 }}
           viewport={{ once: true }}
         >
-          <p className="text-start">
+          <p className="text-start mb-2">
             Para ayudarte a alcanzar tus metas, mi método de coaching se basa en
             lo siguiente:
           </p>
@@ -263,7 +263,7 @@ function Home({ setSelectedOption }: HomeProps) {
             </p>
           </m.div>
           <m.div
-            className="bg-white rounded-md p-5 my-1 text-success-600"
+            className="bg-white rounded-md p-5 my-1 font-medium text-success-600"
             initial={{ opacity: 0, translateX: 100 }}
             whileInView={{ opacity: 1, translateX: 0 }}
             transition={{ duration: 1 }}
@@ -300,7 +300,7 @@ function Home({ setSelectedOption }: HomeProps) {
               </li>
             </ul>
           </m.div>
-          <m.div className="bg-white rounded-md p-5 my-1 text-success-600"
+          <m.div className="bg-white rounded-md p-5 my-1 font-medium text-success-600"
                       initial={{ opacity: 0, translateX: -100 }}
                       whileInView={{ opacity: 1, translateX: 0 }}
                       transition={{ duration: 1 }}
@@ -336,7 +336,7 @@ function Home({ setSelectedOption }: HomeProps) {
               </li>
             </ul>
           </m.div>
-          <m.div className="bg-white rounded-md p-5 my-1 text-success-600"
+          <m.div className="bg-white rounded-md p-5 my-1 font-medium text-success-600"
                                 initial={{ opacity: 0, translateX: 100 }}
                                 whileInView={{ opacity: 1, translateX: 0 }}
                                 transition={{ duration: 1 }}

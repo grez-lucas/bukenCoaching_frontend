@@ -103,11 +103,11 @@ function AboutMe( {setSelectedOption} : AboutMeProps ) {
               y "gurus" también lo es.
               <br />
               <br />
-              En lo general, no me arrepiento de nada de lo que hice, ya que me
-              ayudó a aprender. Pero si pudiera hacer las cosas de nuevo, te
-              aseguro que lo haría de manera distinta. Oh, el progreso que
+              En general, no me arrepiento por mis acciones pasadas, ya que me
+              contribuyeron a mi aprendizaje. Sin embargo, si pudiera hacer las cosas de nuevo, te
+              aseguro que lo haría de manera distinta. Solo puedo imaginar el progreso que
               podría haber hecho si hubiera saltado todos los errores y pasos
-              inútiles que tomé.
+              inútiles que tomé en el camino.
               <br />
               <br />
             </p>
