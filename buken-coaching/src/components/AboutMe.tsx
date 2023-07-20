@@ -59,7 +59,7 @@ function AboutMe( {setSelectedOption} : AboutMeProps ) {
         <section className="flex flex-col items-center px-8 divide-main divide-y-2">
           <div className="flex flex-col items-center">
             <p className="whitespace-break-spaces">
-              ¡Hola! Mi nombre es <strong>Lucas Grez</strong>, también conocido
+              ¡Hola! Mi nombre es <strong>Lucas Grez Klenner</strong>, también conocido
               como <strong>Luken Buken</strong>. Soy el creador de{" "}
               <strong>Buken Coaching</strong> y quería compartir un poco sobre
               mi y mi viaje por el mundo fitness.
