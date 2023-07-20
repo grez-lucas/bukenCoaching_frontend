@@ -59,7 +59,6 @@ function ResultsCarousel() {
         src={Img3}
         className="block w-full"
         alt="..." 
-        loading="lazy"
         />
 
     </div>
@@ -72,7 +71,6 @@ function ResultsCarousel() {
         src={Img1}
         className="block w-full"
         alt="..."
-        loading="lazy"
         />
 
     </div>
@@ -85,7 +83,6 @@ function ResultsCarousel() {
         src={Img2}
         className="block w-full"
         alt="..." 
-        loading="lazy"
         />
 
     </div>
